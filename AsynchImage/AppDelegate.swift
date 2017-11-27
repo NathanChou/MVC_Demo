@@ -12,12 +12,50 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let reachability = Reachability()!;
 
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(internetChanged), name: ReachabilityChangedNotification, object: reachability);
+        do{
+            try reachability.startNotifier();
+        }catch{
+            print("could not start notifier");
+        }
+
+        
         return true
     }
+    
+    
+    func internetChanged(note:NSNotification){
+        let reachbility = note.object as! Reachability;
+        
+        if reachbility.isReachable{
+            
+            if reachbility.isReachableViaWiFi{
+                print("使用 wifi");
+            }else{
+                //print("reachable  wifi fail");
+            }
+            if reachbility.isReachableViaWWAN{
+                print("使用 行動網路");
+            }else{
+                //print("reachable 4G fail");
+            }
+        }else{
+            print("沒有網路連線");
+            let alert = UIAlertController(title: "警告", message: "失去網路連線", preferredStyle: .alert);
+            alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil));
+            self.window?.rootViewController?.present(alert, animated: true, completion: nil);
+        }
+    }
+
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

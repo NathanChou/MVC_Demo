@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8613FE611FBE7F3E00A98A95 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8613FE601FBE7F3E00A98A95 /* NewViewController.swift */; };
+		863078851F26EBCF009DF0C4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863078841F26EBCF009DF0C4 /* Reachability.swift */; };
 		864963DF1F0AA9C000AB191A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864963DE1F0AA9C000AB191A /* AppDelegate.swift */; };
 		864963E11F0AA9C000AB191A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864963E01F0AA9C000AB191A /* ViewController.swift */; };
 		864963E41F0AA9C000AB191A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864963E21F0AA9C000AB191A /* Main.storyboard */; };
@@ -14,6 +16,9 @@
 		864963E91F0AA9C000AB191A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864963E71F0AA9C000AB191A /* LaunchScreen.storyboard */; };
 		864963F41F0AA9C100AB191A /* AsynchImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864963F31F0AA9C100AB191A /* AsynchImageTests.swift */; };
 		864963FF1F0AA9C100AB191A /* AsynchImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864963FE1F0AA9C100AB191A /* AsynchImageUITests.swift */; };
+		864964101F0AAA2700AB191A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8649640F1F0AAA2700AB191A /* Model.swift */; };
+		864964121F0AABFD00AB191A /* myData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864964111F0AABFD00AB191A /* myData.swift */; };
+		864964141F0ABF1300AB191A /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864964131F0ABF1300AB191A /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8613FE601FBE7F3E00A98A95 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		863078841F26EBCF009DF0C4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		864963DB1F0AA9C000AB191A /* AsynchImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsynchImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		864963DE1F0AA9C000AB191A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		864963E01F0AA9C000AB191A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 		864963FA1F0AA9C100AB191A /* AsynchImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsynchImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		864963FE1F0AA9C100AB191A /* AsynchImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchImageUITests.swift; sourceTree = "<group>"; };
 		864964001F0AA9C100AB191A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8649640F1F0AAA2700AB191A /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		864964111F0AABFD00AB191A /* myData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myData.swift; sourceTree = "<group>"; };
+		864964131F0ABF1300AB191A /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +107,11 @@
 		864963DD1F0AA9C000AB191A /* AsynchImage */ = {
 			isa = PBXGroup;
 			children = (
-				864963DE1F0AA9C000AB191A /* AppDelegate.swift */,
-				864963E01F0AA9C000AB191A /* ViewController.swift */,
-				864963E21F0AA9C000AB191A /* Main.storyboard */,
 				864963E51F0AA9C000AB191A /* Assets.xcassets */,
-				864963E71F0AA9C000AB191A /* LaunchScreen.storyboard */,
 				864963EA1F0AA9C000AB191A /* Info.plist */,
+				8649640E1F0AA9DE00AB191A /* Model */,
+				8649640D1F0AA9D500AB191A /* View */,
+				8649640C1F0AA9D300AB191A /* Controller */,
 			);
 			path = AsynchImage;
 			sourceTree = "<group>";
@@ -123,6 +132,36 @@
 				864964001F0AA9C100AB191A /* Info.plist */,
 			);
 			path = AsynchImageUITests;
+			sourceTree = "<group>";
+		};
+		8649640C1F0AA9D300AB191A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				864963E01F0AA9C000AB191A /* ViewController.swift */,
+				864963DE1F0AA9C000AB191A /* AppDelegate.swift */,
+				8613FE601FBE7F3E00A98A95 /* NewViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8649640D1F0AA9D500AB191A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				864963E71F0AA9C000AB191A /* LaunchScreen.storyboard */,
+				864963E21F0AA9C000AB191A /* Main.storyboard */,
+				864964131F0ABF1300AB191A /* MyCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8649640E1F0AA9DE00AB191A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8649640F1F0AAA2700AB191A /* Model.swift */,
+				864964111F0AABFD00AB191A /* myData.swift */,
+				863078841F26EBCF009DF0C4 /* Reachability.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				864964101F0AAA2700AB191A /* Model.swift in Sources */,
+				864964141F0ABF1300AB191A /* MyCell.swift in Sources */,
+				8613FE611FBE7F3E00A98A95 /* NewViewController.swift in Sources */,
+				863078851F26EBCF009DF0C4 /* Reachability.swift in Sources */,
 				864963E11F0AA9C000AB191A /* ViewController.swift in Sources */,
 				864963DF1F0AA9C000AB191A /* AppDelegate.swift in Sources */,
+				864964121F0AABFD00AB191A /* myData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +558,7 @@
 				864964051F0AA9C100AB191A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		864964061F0AA9C100AB191A /* Build configuration list for PBXNativeTarget "AsynchImageTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +567,7 @@
 				864964081F0AA9C100AB191A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		864964091F0AA9C100AB191A /* Build configuration list for PBXNativeTarget "AsynchImageUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +576,7 @@
 				8649640B1F0AA9C100AB191A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
